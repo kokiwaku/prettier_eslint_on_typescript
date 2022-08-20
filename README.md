@@ -1,0 +1,2 @@
+# prettier_eslint_on_typescript
+prettierとeslintの動作確認（typescript環境）
