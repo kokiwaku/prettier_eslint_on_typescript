@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  node:
+    image: node-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true // コンテナが正常終了しないようにつける。つけないと、フォアグラウンドで起動するプロセスがないので、正常終了してしまう、んだと思う
+    volumes:
+      - .:/app
