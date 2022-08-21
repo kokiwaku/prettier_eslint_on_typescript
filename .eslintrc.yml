@@ -1,0 +1,17 @@
+env:
+  browser: true
+  es2021: true
+  'vue/setup-compiler-macros': true
+
+parser: 'vue-eslint-parser'
+
+parserOptions:
+  sourceType: module
+
+plugins:
+  - vue
+
+extends:
+  - 'eslint:recommended'
+  - 'plugin:vue/vue3-recommended'
+  - 'prettier'
