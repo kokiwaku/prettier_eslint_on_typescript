@@ -2,10 +2,13 @@ version: '3'
 
 services:
   node:
-    image: node-image
+    image: formater-linter-test
     build:
       context: .
       dockerfile: Dockerfile
-    tty: true // コンテナが正常終了しないようにつける。つけないと、フォアグラウンドで起動するプロセスがないので、正常終了してしまう、んだと思う
+    tty: true
     volumes:
       - .:/app
+    ports:
+      # ホストのポートとコンテナのポートを接続
+      - "3000:3000"
